@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fontawesome.com.cn/wp-content/themes/deeptimes/fonts/font-awesome/css/font-awesome.css">
+    <title>MyTer</title>
+    <style>
+        * {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+        
+        body {
+            /* background-color: #8da1f8; */
+            background-color: white;
+            /* 渐变 */
+            /* background: linear-gradient(200deg, #005bea, #00c6fb); */
+        }
+        /* --------------------- */
+        /* 顶部导航栏 */
+        
+        .dingbudaohanglan {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            /* background-color: #8da1f8; */
+        }
+        
+        .nav {
+            width: 1200px;
+            height: 50px;
+            position: relative;
+            top: 0;
+            /* box-shadow: 0 0px 20px rgba(0, 0, 0, 0.5); */
+            border-radius: 10px;
+            /* background-color: rgba(255, 187, 238, 0.2); */
+            /* background-color: gainsboro; */
+            /* background: linear-gradient(155deg, rgba(0, 255, 255, 0.459), pink); */
+            /* background-color: rgba(219, 219, 219, 0.5); */
+            /* border: 1px solid gray; */
+        }
+        
+        .nav ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            right: 5%;
+        }
+        
+        .dingbudaohanglan .nav ul li .login {
+            /* background-color: rgba(0, 247, 255, 0.5); */
+            font-size: 35px;
+            /* padding: 5px; */
+            /* margin: 0; */
+            width: 100px;
+            float: right;
+            /* display: block; */
+            position: relative;
+            /* border-top: 1px solid lightskyblue;
+            border-left: 1px solid lightskyblue;
+            border-right: 1px solid blue;
+            border-bottom: 1px solid blue; */
+            /* padding: 0;
+            margin: 0; */
+            /* left: 50px; */
+            right: 25%;
+            /* color: orangered; */
+            font-family: '黑体';
+            border-radius: 20%;
+        }
+        
+        .dingbudaohanglan .nav ul li .login:hover {
+            /* background-color: rgba(0, 204, 255, 0.5); */
+            /* background: linear-gradient(150deg, rgb(194, 194, 194), rgb(105, 105, 105)); */
+            font-size: 35px;
+            /* padding: 5px; */
+            /* margin: 0; */
+            width: 100px;
+            float: right;
+            /* display: block; */
+            position: relative;
+            /* border: 1px solid gray; */
+            /* padding: 0;
+            margin: 0; */
+            /* left: 50px; */
+            right: 25%;
+            color: rgb(0, 238, 255);
+            font-family: '宋体';
+            /* box-shadow: 0 0px 5px gray; */
+        }
+        
+        .nav ul .nav-box {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: calc((100%/6)*1);
+            height: 10px;
+            border-radius: 2px;
+            transition: .5s;
+        }
+        
+        .nav ul li {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .nav ul li a {
+            color: rgb(70, 100, 180);
+            font: 100 30px '优设标题黑';
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 70px;
+        }
+        
+        .nav ul li:nth-child(1):hover~.nav-box {
+            left: calc(100%/6*0);
+            background-color: pink;
+            box-shadow: 0 0px 10px pink;
+        }
+        
+        .nav ul li:nth-child(2):hover~.nav-box {
+            left: calc(100%/6*1);
+            background-color: red;
+            box-shadow: 0 0px 10px red;
+        }
+        
+        .nav ul li:nth-child(3):hover~.nav-box {
+            left: calc(100%/6*2);
+            background-color: #d18df8;
+            box-shadow: 0 0px 10px #d18df8;
+        }
+        
+        .nav ul li:nth-child(4):hover~.nav-box {
+            left: calc(100%/6*3);
+            background-color: skyblue;
+            box-shadow: 0 0px 10px skyblue;
+        }
+        
+        .nav ul li:nth-child(5):hover~.nav-box {
+            left: calc(100%/6*4);
+            background-color: aqua;
+            box-shadow: 0 0px 10px aqua;
+        }
+        
+        .nav ul li:nth-child(6):hover~.nav-box {
+            left: calc(100%/6*5);
+            background-color: lightyellow;
+            box-shadow: 0 0px 10px lightyellow;
+        }
+        /* 顶部导航栏结束 */
+        /* ---------------------- */
+        /* ---------------------- */
+        /* 侧边导航栏 */
+        
+        .cebiandaohanglan {
+            /* box-shadow: 0 5px 20px rgba(0, 238, 255, 0.5); */
+            /* float: right; */
+            /* width: 300px; */
+            width: 30%;
+            height: 100%;
+            /* min-height: 60vh; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+            /* padding: 0; */
+            /* margin: 0; */
+            /* background-color: skyblue; */
+        }
+        
+        .cebiandaohanglan nav {
+            box-shadow: 0 0px 20px rgba(0, 238, 255, 0.5);
+            position: fixed;
+            width: 250px;
+            height: 650px;
+            background-color: rgba(219, 219, 219, 0.5);
+            /* background-color: black; */
+        }
+        
+        .menus li:hover {
+            background-color: steelblue;
+            /* background-color: black; */
+        }
+        
+        .li .fa {
+            font-size: 20px;
+            width: 50px;
+            height: 20px;
+            text-align: center;
+            /* margin-left: 5px; */
+            margin: 30px 0 30px 0;
+        }
+        
+        .li ul {
+            width: 0;
+            height: 550px;
+            padding: 50px 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* background-color: white; */
+            position: absolute;
+            top: 0;
+            right: 0;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+        
+        .li ul li {
+            padding: 16px 24px;
+            white-space: normal;
+            transition: 0.3s;
+            text-align: center;
+        }
+        
+        .li:hover ul {
+            width: 200px;
+        }
+        
+        .li ul li:hover {
+            background-color: lightcyan;
+        }
+        
+        .cebiandaohanglan .menus .li ul li a {
+            font-size: 15px;
+            width: 50px;
+            height: 25px;
+            font-family: '仿宋';
+            color: lightskyblue;
+            /* background-color: pink; */
+            /* float: right; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* text-align: center; */
+        }
+        
+        .li ul li a img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            /* float: left; */
+            /* justify-content: center; */
+            /* align-items: center; */
+        }
+        
+        .menus .li {
+            /* border-top: 1px solid greenyellow; */
+            border-bottom: 1px solid gainsboro;
+        }
+        
+        .menus .li ul li {
+            /* border-top: 1px solid skyblue; */
+            border-bottom: 1px solid rgb(63, 181, 255);
+            /* border-bottom: 1px solid skyblue; */
+        }
+        /* 侧边导航栏结束 */
+        /* ------------------------ */
+        /* 整个内容栏 */
+        
+        .neironglan {
+            width: 100%;
+            height: 80vh;
+            /* background-color: blueviolet; */
+            /* position: fixed; */
+        }
+        /* 整个内容栏结束 */
+        /* 右侧内容栏 */
+        
+        .youceneironglan {
+            box-shadow: 0px 0 20px rgba(255, 0, 0, 0.5);
+            display: flex;
+            float: right;
+            width: 65%;
+            /* height: 80vh; */
+            height: 85%;
+            border: 1px solid ghostwhite;
+            position: fixed;
+            /* top: 25px; */
+            left: 30%;
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+        /* 图片栏 */
+        
+        .tupianlan {
+            background-color: skyblue;
+            width: 90%;
+            height: 130px;
+            margin: 20px 0px 10px 40px;
+            /* position: absolute; */
+            /* float: right; */
+        }
+        
+        .tupianlan img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            /* position: absolute; */
+            /* top: 10px; */
+            /* right: 10px; */
+            float: right;
+            margin: 15px 15px 0 15px;
+        }
+        
+        .tupianlan h3 {
+            font-size: 30px;
+            /* justify-content: center; */
+            /* align-items: center; */
+            text-align: center;
+        }
+        
+        .tupianlan p {
+            text-align: center;
+            font-family: '仿宋';
+            margin: 10px 0 10px 0;
+            font-size: 20px;
+        }
+        /* 图片栏结束 */
+        /* 右侧内容栏结束 */
+        /* ---------------------- */
+        /* 快捷菜单 */
+        
+        .kuaijiecaidan {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to top left, #84a0f4, #c2e9fb);
+        }
+        
+        .menu-box {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+        }
+        
+        .menu-button {
+            width: 50px;
+            height: 50px;
+            background-color: #5c67ff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(92, 103, 255, 0.3);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            cursor: pointer;
+            transition: 0.2s ease-in;
+        }
+        
+        .menu-button:hover {
+            background-color: #4854ff;
+            box-shadow: 0 0 0 8px rgba(92, 103, 255, 0.3);
+        }
+        
+        .menu-button .line-box {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* border: 1px solid red; */
+            cursor: pointer;
+            transition: transform 0.3s ease-out;
+        }
+        
+        .menu-button .line {
+            background-color: white;
+            width: 100%;
+            height: 2px;
+            border-radius: 2px;
+        }
+        
+        .menu-button .line:first-child {
+            width: 50%;
+            transform-origin: right;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .menu-button .line:last-child {
+            width: 50%;
+            align-self: flex-end;
+            transform-origin: left;
+            transition: transform .3s ease-in-out;
+        }
+        
+        .menu-list {
+            width: 140px;
+            height: 160px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 8px;
+            list-style: none;
+            padding: 6px;
+            box-shadow: 0 0 4px rgba(92, 103, 255, 0.15);
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+            opacity: 0;
+            transform: scale(0);
+            transform-origin: bottom right;
+            transition: .3s ease;
+            transition-delay: .1s;
+        }
+        
+        .menu-list li {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            color: #1c3991;
+            cursor: pointer;
+            position: relative;
+            /* 默认隐藏 */
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: 0.2s ease-in;
+        }
+        
+        .menu-list li:hover {
+            color: #5c67ff;
+        }
+        
+        .menu-list li::before {
+            content: "";
+            width: calc(100%-24px);
+            height: 1px;
+            background-color: rgba(92, 103, 255, 0.1);
+            position: absolute;
+            bottom: 0;
+            left: 12px;
+        }
+        
+        .menu-list li:last-child::before {
+            display: none;
+        }
+        
+        .menu-list .fa {
+            font-size: 18px;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* 菜单项文本 */
+        
+        .menu-list span {
+            font-size: 14px;
+            margin-left: 8px;
+        }
+        
+        .active .line-box {
+            transform: rotate(-45deg);
+        }
+        
+        .active .line-box .line:first-child {
+            transform: rotate(-90deg) translateX(1px);
+        }
+        
+        .active .line-box .line:last-child {
+            transform: rotate(-90deg) translateX(-1px);
+        }
+        
+        .active .menu-list {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .active .menu-list li {
+            animation: fade-in-item .4s linear forwards;
+        }
+        
+        .active .menu-list li:nth-child(1) {
+            animation-delay: 0.4s;
+        }
+        
+        .active .menu-list li:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+        
+        .active .menu-list li:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+        
+        .active .menu-list li:nth-child(4) {
+            animation-delay: 0.1s;
+        }
+        
+        @keyframes fade-in-item {
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        /* 快捷菜单结束 */
+    </style>
+</head>
+
+<body>
+    <div class="dingbudaohanglan">
+        <div class="nav">
+            <!-- 顶部导航栏 -->
+            <ul>
+                <li><a href="./index.html">
+                    首页
+                    <script>
+                        alert('由于不会PHP代码连接并操作数据库,所以此网站还有很多缺陷,哈哈..欢迎投稿!!');
+                    </script>
+                </a></li>
+                <li><a href="#">开发中</a></li>
+                <li><a href="#">开发中</a></li>
+                <li><a href="#">开发中</a></li>
+                <li><a href="receive_order/Jiedan.html">接单</a></li>
+                <li><a href="./Login/login.html" class="login">
+                    登录
+                    <!-- <script>
+                        alert('');
+                    </script> -->
+                </a></li>
+                <div class="nav-box"></div>
+            </ul>
+        </div>
+    </div>
+    <!-- 顶部导航栏结束 -->
+
+    <div class="neironglan">
+        <!-- 整个内容栏 -->
+
+        <div class="cebiandaohanglan">
+            <!-- 侧边导航栏 -->
+            <nav>
+                <ul class="menus">
+                    <li class="li">
+                        <i class="fa fa-th-large" aria-hidden="true"></i> 开发中
+                        <ul>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="li">
+                        <i class="fa fa-check-square" aria-hidden="true"></i> 软件库
+                        <ul>
+                            <li><a href="./software/API小工具.zip">API小工具</a></li>
+                            <li><a href="./software/二维码生成-自定义底图.zip">二维码生成器</a></li>
+                            <li><a href="./software/自定义多开器.zip">自定义多开小工具</a></li>
+                            <li><a href="./software/查绑+短轰16e.zip">16e查Q绑</a></li>
+                            <li><a href="./software/WIN10正版激活-永久.zip">win-10激活工具</a></li>
+                            <!-- <li><a href="#">测试</a></li>
+                        <li><a href="#">测试</a></li>
+                        <li><a href="#">测试</a></li>
+                        <li><a href="#">测试</a></li>
+                        <li><a href="#">测试</a></li> -->
+                        </ul>
+                    </li>
+
+                    <li class="li">
+                        <i class="fa fa-comment" aria-hidden="true"></i> 朋友
+                        <ul>
+                            <li>
+                                <a href="https://www.90lhd.com/">
+                                    <img src="./images/惦记.png" alt="">
+                                    <br>惦记°
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://120.79.227.115/">
+                                    <img src="./images/Oya.png" alt="">
+                                    <br>Oya
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.f123.club/">
+                                    <img src="./images/Code edge.png" alt="">
+                                    <br> Code edge
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./index.html">
+                                    <img src="./images/鸣月Ter.png" alt="">
+                                    <br>鸣月Ter
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="li">
+                        <i class="fa fa-tags" aria-hidden="true"></i> 开发中
+                        <ul>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="li">
+                        <i class="fa fa-bars" aria-hidden="true"></i> 开发中
+                        <ul>
+                            <!-- <li><a href="#">Grid 宫格</a></li>
+                        <li><a href="#">IndexBar 索引栏</a></li>
+                        <li><a href="#">NavBar 导航栏</a></li>
+                        <li><a href="#">Pagination 分页</a></li>
+                        <li><a href="#">Sidebar 侧边导航</a></li>
+                        <li><a href="#">Tab 标签页</a></li>
+                        <li><a href="#">Tabbar 标签栏</a></li>
+                        <li><a href="#">TreeSelect 分类选择</a></li> -->
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                            <li><a href="#">测试中</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+
+        </div>
+        <!-- 侧边导航栏结束 -->
+
+        <div class="youceneironglan">
+            <!-- 内容栏 -->
+            <div class="tupianlan">
+                <img src="./images/image.jpg" alt="">
+                <h3>你好-世界!</h3>
+                <!-- <br> -->
+                <p>你是否有自己的兴趣爱好呢?我的兴趣爱好就是编程</p>
+                <p>编程是把双刃剑-好玩,但是<b>掉头发</b></p>
+            </div>
+        </div>
+        <!-- 内容栏结束 -->
+
+
+        <div class="menu-box">
+            <!-- 快捷菜单图标 -->
+            <div class="menu-button">
+                <!-- 图标按钮 -->
+                <div class="line-box">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <!-- 图标按钮结束 -->
+
+            <!-- 菜单列表 -->
+            <ul class="menu-list">
+                <li><i class="fa fa-sliders"></i><span>设置</span></li>
+                <li><i class="fa fa-clone"></i><span>复制</span></li>
+                <li><i class="fa fa-share-square-o"></i><span>分享</span></li>
+                <li><i class="fa fa-trash-o"></i><span>删除</span></li>
+            </ul>
+            <script>
+                const menu_box = document.querySelector('.menu-box');
+                const menu_button = document.querySelector('.menu-button');
+                menu_button.addEventListener('click', function() {
+                    menu_box.classList.toggle('active');
+                })
+            </script>
+            <!-- 菜单列表结束 -->
+        </div>
+        <!-- 快捷菜单图标结束 -->
+
+
+
+
+
+    </div>
+    <!-- 整个内容栏结束 -->
+
+
+
+    <script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="../tb2/lzxg/canvas-nest.min.js"></script>
+</body>
+
+</html>
