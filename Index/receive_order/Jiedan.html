@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>钱包空空</title>
+    <!-- 引入字体图标库 -->
+    <link rel="stylesheet" href="./css/font-awesome.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            border: 1px solid aqua;
+        }
+        /* 标签栏 */
+        
+        .nav {
+            display: flex;
+        }
+        
+        .nav .item {
+            width: 140px;
+            height: 110px;
+            border-right: 1px solid aqua;
+            border-bottom: 1px solid aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav .item:last-child {
+            border-right: none;
+        }
+        
+        .nav .item::before {
+            content: "";
+            width: 80px;
+            height: 80px;
+            background-color: #38ada9;
+            border-radius: 50%;
+            position: absolute;
+            transition: 0.3s;
+        }
+        
+        .nav .fa {
+            color: #fff;
+            position: relative;
+            font-size: 36px;
+        }
+        
+        .nav .item .fa p {
+            font-size: 10px;
+            text-align: center;
+        }
+        
+        .nav .item.active::before {
+            width: 150%;
+            height: 150%;
+        }
+        /* 内容区 */
+        
+        .content {
+            width: 100%;
+            height: 300px;
+            position: relative;
+        }
+        
+        section {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            /* 默认隐藏 */
+            opacity: 0;
+            /* 不透明度改变时的过渡效果 */
+            transition: opacity 0.4s;
+        }
+        
+        section span {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
+        }
+        /* 内容区选中态样式 */
+        
+        section.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="item active">
+                <i class="fa">
+                    鸣月Ter
+                </i>
+            </div>
+            <div class="item">
+                <i class="fa">
+                    Oya
+                </i>
+            </div>
+            <div class="item">
+                <i class="fa">
+                    Null
+                </i>
+            </div>
+            <div class="item">
+                <i class="fa">
+                    Null
+                </i>
+            </div>
+            <div class="item">
+                <i class="fa">
+                    Null
+                </i>
+            </div>
+        </div>
+        <div class="content">
+            <section class="active">
+                <span>HTML5样式开发、Photoshop刚入门、易语言入门阶段、微信小程序刚入门、企业微信爬回放。QQ:2193909823</span>
+            </section>
+            <section>
+                <span>
+                    HTML5与Javascript。VX:YnaQuI
+                </span>
+            </section>
+            <section>
+                <span>
+                    无
+                </span>
+            </section>
+            <section>
+                <span>
+                    无
+                </span>
+            </section>
+            <section>
+                <span>
+                    无
+                </span>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    const items = document.querySelectorAll('.item');
+    const sections = document.querySelectorAll('section');
+
+    function removeActive() {
+        items.forEach(item => {
+            item.classList.remove('active');
+        });
+        sections.forEach(item => {
+            item.classList.remove('active');
+        });
+    }
+    items.forEach((item, index) => {
+        item.addEventListener('click', function() {
+            removeActive();
+            item.classList.add('active');
+            sections[index].classList.add('active');
+        })
+    })
+</script>
