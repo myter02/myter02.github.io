@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet"
-        href="https://fontawesome.com.cn/wp-content/themes/deeptimes/fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="https://fontawesome.com.cn/wp-content/themes/deeptimes/fonts/font-awesome/css/font-awesome.css">
     <title>MyTer</title>
     <style>
         * {
@@ -17,18 +16,16 @@
             text-decoration: none;
             border-radius: 10px;
         }
-
+        
         body {
             /* background-color: #8da1f8; */
-            background: linear-gradient(45deg,rgba(135, 207, 235, 0.5),rgba(173, 216, 230, 0.5));
-
+            background: linear-gradient(45deg, rgba(135, 207, 235, 0.5), rgba(173, 216, 230, 0.5));
             /* 渐变 */
             /* background: linear-gradient(200deg, #005bea, #00c6fb); */
         }
-
         /* --------------------- */
         /* 顶部导航栏 */
-
+        
         .dingbudaohanglan {
             display: flex;
             justify-content: center;
@@ -36,7 +33,7 @@
             height: 10vh;
             /* background-color: #8da1f8; */
         }
-
+        
         .nav {
             width: 1200px;
             /* background-color: aqua; */
@@ -46,17 +43,16 @@
             border-radius: 10px;
             animation: dbdhl 2s;
         }
-
+        
         @keyframes dbdhl {
             0% {
                 top: -100px;
             }
-
             100% {
                 top: 0px;
             }
         }
-
+        
         .nav ul {
             width: 100%;
             height: 100%;
@@ -64,7 +60,7 @@
             align-items: center;
             right: 5%;
         }
-
+        
         .dingbudaohanglan .nav ul li .login {
             /* background-color: rgba(0, 247, 255, 0.5); */
             font-size: 35px;
@@ -79,7 +75,7 @@
             font-family: '楷体';
             border-radius: 20%;
         }
-
+        
         .dingbudaohanglan .nav ul li .login:hover {
             font-size: 35px;
             /* padding: 5px; */
@@ -92,7 +88,7 @@
             color: rgb(0, 238, 255);
             /* box-shadow: 0 0px 5px gray; */
         }
-
+        
         .nav ul .nav-box {
             position: absolute;
             bottom: 0;
@@ -102,12 +98,12 @@
             border-radius: 2px;
             transition: .5s;
         }
-
+        
         .nav ul li {
             width: 100%;
             text-align: center;
         }
-
+        
         .nav ul li a {
             color: rgb(70, 100, 180);
             font: 100 30px '楷体';
@@ -116,48 +112,47 @@
             height: 100%;
             line-height: 70px;
         }
-
+        
         .nav ul li:nth-child(1):hover~.nav-box {
             left: calc(100%/6*0);
             background-color: pink;
             box-shadow: 0 0px 10px pink;
         }
-
+        
         .nav ul li:nth-child(2):hover~.nav-box {
             left: calc(100%/6*1);
             background-color: red;
             box-shadow: 0 0px 10px red;
         }
-
+        
         .nav ul li:nth-child(3):hover~.nav-box {
             left: calc(100%/6*2);
             background-color: #d18df8;
             box-shadow: 0 0px 10px #d18df8;
         }
-
+        
         .nav ul li:nth-child(4):hover~.nav-box {
             left: calc(100%/6*3);
             background-color: skyblue;
             box-shadow: 0 0px 10px skyblue;
         }
-
+        
         .nav ul li:nth-child(5):hover~.nav-box {
             left: calc(100%/6*4);
             background-color: aqua;
             box-shadow: 0 0px 10px aqua;
         }
-
+        
         .nav ul li:nth-child(6):hover~.nav-box {
             left: calc(100%/6*5);
             background-color: lightyellow;
             box-shadow: 0 0px 10px lightyellow;
         }
-
         /* 顶部导航栏结束 */
         /* ---------------------- */
         /* ---------------------- */
         /* 侧边导航栏 */
-
+        
         .cebiandaohanglan {
             width: 30%;
             height: 100%;
@@ -166,9 +161,8 @@
             justify-content: center;
             align-items: center;
             float: left;
-
         }
-
+        
         .cebiandaohanglan nav {
             box-shadow: 0 0px 20px rgb(0, 153, 255);
             position: fixed;
@@ -176,25 +170,23 @@
             height: 650px;
             background: linear-gradient(135deg, rgba(0, 255, 242, 0.5), rgba(0, 38, 255, 0.5));
             /* background-color: black; */
-
             animation: cebianlan 2s;
         }
-
+        
         @keyframes cebianlan {
             0% {
                 left: -200px;
             }
-
             100% {
                 left: 90px;
             }
         }
-
+        
         .menus li:hover {
             background-color: steelblue;
             /* background-color: black; */
         }
-
+        
         .li .fa {
             font-size: 20px;
             width: 50px;
@@ -203,7 +195,7 @@
             /* margin-left: 5px; */
             margin: 30px 0 30px 0;
         }
-
+        
         .li ul {
             width: 0;
             height: 550px;
@@ -217,22 +209,22 @@
             overflow: hidden;
             transition: 0.5s;
         }
-
+        
         .li ul li {
             padding: 16px 24px;
             white-space: normal;
             transition: 0.3s;
             text-align: center;
         }
-
+        
         .li:hover ul {
             width: 200px;
         }
-
+        
         .li ul li:hover {
             background-color: rgb(255, 255, 255);
         }
-
+        
         .cebiandaohanglan .menus .li ul li a {
             font-size: 15px;
             width: 50px;
@@ -240,35 +232,33 @@
             font-family: '仿宋';
             color: rgb(0, 0, 0);
         }
-
+        
         .menus .li {
             border-bottom: 1px solid rgba(0, 119, 255, 0.5);
             border-radius: 10px 10px 0px 20px;
         }
-
+        
         .menus .li ul li {
             border-bottom: 1px solid rgba(0, 255, 255, 0.5);
             border-radius: 10px 10px 0px 10px;
         }
-
+        
         .li ul li a img {
             width: 30px;
             height: 30px;
             border-radius: 50%;
         }
-
         /* 侧边导航栏结束 */
         /* ------------------------ */
         /* 整个内容栏 */
-
+        
         .neironglan {
             width: 100%;
             height: 80vh;
         }
-
         /* 整个内容栏结束 */
         /* 右侧内容栏 */
-
+        
         .youceneironglan {
             box-shadow: 0px 0 20px rgb(166, 252, 255);
             display: flex;
@@ -282,9 +272,8 @@
             left: 30%;
             background-color: rgba(255, 255, 255, 0.6);
         }
-
         /* 图片栏 */
-
+        
         .tupianlan {
             background: linear-gradient(90deg, aqua, rgb(0, 183, 255));
             width: 90%;
@@ -295,7 +284,7 @@
             /* position: absolute; */
             /* float: right; */
         }
-
+        
         .tupianlan img {
             border-radius: 50%;
             width: 100px;
@@ -303,21 +292,20 @@
             float: right;
             margin: 15px 15px 0 15px;
         }
-
+        
         .tupianlan h3 {
             font-size: 30px;
             text-align: center;
         }
-
+        
         .tupianlan p {
             text-align: center;
             font-family: '仿宋';
             margin: 10px 0 10px 0;
             font-size: 20px;
         }
-
         /* 图片栏结束 */
-
+        
         .youceneironglan-left {
             width: 15%;
             height: 70%;
@@ -331,20 +319,18 @@
             box-shadow: 10px 10px 20px 5px rgb(47, 0, 255);
             margin-right: 30px;
             border-radius: 20px 0 20px 0;
-
             animation: nrl-left 2s;
         }
-
+        
         @keyframes nrl-left {
             0% {
                 top: 500px;
             }
-
             100% {
                 top: 200px;
             }
         }
-
+        
         .youceneironglan-center {
             width: 15%;
             height: 70%;
@@ -357,20 +343,18 @@
             border: 1px solid rgb(81, 186, 255);
             box-shadow: 10px 10px 20px 5px rgb(104, 187, 255);
             border-radius: 20px 0 20px 0;
-
             animation: nrl-center 2s;
         }
-
+        
         @keyframes nrl-center {
             0% {
                 top: 500px;
             }
-
             100% {
                 top: 200px;
             }
         }
-
+        
         .youceneironglan-right {
             width: 25%;
             height: 70%;
@@ -383,28 +367,25 @@
             border: 1px solid rgb(0, 26, 255);
             box-shadow: 10px 10px 20px 5px rgb(0, 255, 242);
             border-radius: 20px 0 20px 0;
-
             animation: nrl-right 2s;
         }
-
+        
         @keyframes nrl-right {
             0% {
                 top: 500px;
             }
-
             100% {
                 top: 200px;
             }
         }
-
+        
         .youceneironglan-right img {
             width: 90%;
             height: 40%;
             border-radius: 20px 0 20px 0;
             margin: 10px 0px 10px 15px;
-
         }
-
+        
         .youceneironglan-right div {
             width: 90%;
             margin: auto;
@@ -413,14 +394,14 @@
             border: 5px solid rgb(0, 47, 255);
             /* border-radius: 0px; */
             text-align: center;
-            margin-top:18px;
+            margin-top: 18px;
             margin-bottom: 20px;
         }
-
-        .youceneironglan-right .A-More{
+        
+        .youceneironglan-right .A-More {
             width: 40%;
             height: 40px;
-            background: linear-gradient(90deg,rgb(0, 116, 155),rgb(255, 255, 255));
+            background: linear-gradient(90deg, rgb(0, 116, 155), rgb(255, 255, 255));
             border-radius: 0px;
             border: 0px;
             font-size: 26px;
@@ -432,12 +413,10 @@
             color: white;
             border-radius: 10px 0 10px 0;
         }
-
-
         /* 右侧内容栏结束 */
         /* ---------------------- */
         /* 快捷菜单 */
-
+        
         .kuaijiecaidan {
             height: 100vh;
             display: flex;
@@ -445,13 +424,13 @@
             align-items: center;
             background: linear-gradient(to top left, #84a0f4, #c2e9fb);
         }
-
+        
         .menu-box {
             position: fixed;
             bottom: 40px;
             right: 40px;
         }
-
+        
         .menu-button {
             width: 50px;
             height: 50px;
@@ -467,12 +446,12 @@
             cursor: pointer;
             transition: 0.2s ease-in;
         }
-
+        
         .menu-button:hover {
             background-color: #4854ff;
             box-shadow: 0 0 0 8px rgba(92, 103, 255, 0.3);
         }
-
+        
         .menu-button .line-box {
             width: 20px;
             height: 20px;
@@ -483,27 +462,27 @@
             cursor: pointer;
             transition: transform 0.3s ease-out;
         }
-
+        
         .menu-button .line {
             background-color: white;
             width: 100%;
             height: 2px;
             border-radius: 2px;
         }
-
+        
         .menu-button .line:first-child {
             width: 50%;
             transform-origin: right;
             transition: transform 0.3s ease-in-out;
         }
-
+        
         .menu-button .line:last-child {
             width: 50%;
             align-self: flex-end;
             transform-origin: left;
             transition: transform .3s ease-in-out;
         }
-
+        
         .menu-list {
             width: 140px;
             height: 160px;
@@ -521,7 +500,7 @@
             transition: .3s ease;
             transition-delay: .1s;
         }
-
+        
         .menu-list li {
             display: flex;
             align-items: center;
@@ -534,11 +513,11 @@
             transform: translateX(-10px);
             transition: 0.2s ease-in;
         }
-
+        
         .menu-list li:hover {
             color: #5c67ff;
         }
-
+        
         .menu-list li::before {
             content: "";
             width: calc(100%-24px);
@@ -548,11 +527,11 @@
             bottom: 0;
             left: 12px;
         }
-
+        
         .menu-list li:last-child::before {
             display: none;
         }
-
+        
         .menu-list .fa {
             font-size: 18px;
             width: 18px;
@@ -561,58 +540,56 @@
             justify-content: center;
             align-items: center;
         }
-
         /* 菜单项文本 */
-
+        
         .menu-list span {
             font-size: 14px;
             margin-left: 8px;
         }
-
+        
         .active .line-box {
             transform: rotate(-45deg);
         }
-
+        
         .active .line-box .line:first-child {
             transform: rotate(-90deg) translateX(1px);
         }
-
+        
         .active .line-box .line:last-child {
             transform: rotate(-90deg) translateX(-1px);
         }
-
+        
         .active .menu-list {
             opacity: 1;
             transform: scale(1);
         }
-
+        
         .active .menu-list li {
             animation: fade-in-item .4s linear forwards;
         }
-
+        
         .active .menu-list li:nth-child(1) {
             animation-delay: 0.4s;
         }
-
+        
         .active .menu-list li:nth-child(2) {
             animation-delay: 0.3s;
         }
-
+        
         .active .menu-list li:nth-child(3) {
             animation-delay: 0.2s;
         }
-
+        
         .active .menu-list li:nth-child(4) {
             animation-delay: 0.1s;
         }
-
+        
         @keyframes fade-in-item {
             100% {
                 transform: translateX(0);
                 opacity: 1;
             }
         }
-
         /* 快捷菜单结束 */
     </style>
 </head>
@@ -657,8 +634,7 @@
             <nav>
                 <ul class="menus">
                     <li class="li">
-                        <i class="fa fa-th-large" aria-hidden="true"></i>
-                        开发中
+                        <i class="fa fa-th-large" aria-hidden="true"></i> 开发中
                         <ul>
                             <li>
                                 <a href="#">测试中</a>
@@ -684,11 +660,10 @@
                         </ul>
                     </li>
                     <li class="li">
-                        <i class="fa fa-check-square" aria-hidden="true"></i>
-                        软件库
+                        <i class="fa fa-check-square" aria-hidden="true"></i> 软件库
                         <ul>
                             <li>
-                                <a href="./software/API小工具.zip">API小工具</a>
+                                <a href="./software/邮件多发-已改窗口UI.zip">邮件多发工具</a>
                             </li>
                             <li>
                                 <a href="./software/二维码生成-自定义底图.zip">二维码生成器</a>
@@ -706,31 +681,28 @@
                                 <a href="./software/获取skey_QQ群操作2.0_2023.1.29.zip">skey操作QQ群工具</a>
                             </li>
                             <li>
-                                <a href="./software/通讯软件+QQ防撤回工具.zip">通讯软件+QQ防撤回工具2023.4.18</a>
+                                <a href="./software/QQ防撤回+UI.zip">QQ防撤回工具</a>
                             </li>
                             <li>
                                 <a href="./software/激活工具.zip">win11激活工具</a>
                             </li>
-                            <!-- <li><a href="#">测试</a></li> -->
+                            <li><a href="./software/通讯软件.zip">测试</a></li>
                             <!-- <li><a href="#">测试</a></li> -->
                         </ul>
                     </li>
                     <li class="li">
-                        <i class="fa fa-comment" aria-hidden="true"></i>
-                        开发者
+                        <i class="fa fa-comment" aria-hidden="true"></i> 开发者
                         <ul>
                             <li>
                                 <a href="./index.html">
                                     <img src="./images/鸣月Ter.png" alt="">
-                                    <br>
-                                    鸣月Ter
+                                    <br> 鸣月Ter
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li class="li">
-                        <i class="fa fa-tags" aria-hidden="true"></i>
-                        开发中
+                        <i class="fa fa-tags" aria-hidden="true"></i> 开发中
                         <ul>
                             <li>
                                 <a href="#">测试中</a>
@@ -762,8 +734,7 @@
                         </ul>
                     </li>
                     <li class="li">
-                        <i class="fa fa-bars" aria-hidden="true"></i>
-                        开发中
+                        <i class="fa fa-bars" aria-hidden="true"></i> 开发中
                         <ul>
                             <li>
                                 <a href="#">测试中</a>
@@ -861,7 +832,7 @@
             <script>
                 const menu_box = document.querySelector('.menu-box');
                 const menu_button = document.querySelector('.menu-button');
-                menu_button.addEventListener('click', function () {
+                menu_button.addEventListener('click', function() {
                     menu_box.classList.toggle('active');
                 })
             </script>
@@ -870,8 +841,7 @@
         <!-- 快捷菜单图标结束 -->
     </div>
     <!-- 整个内容栏结束 -->
-    <script type="text/javascript" color="0,0,255" opacity="0.7" zIndex="-2" count="99"
-        src="../tb2/lzxg/canvas-nest.min.js"></script>
+    <script type="text/javascript" color="0,0,255" opacity="0.7" zIndex="-2" count="99" src="../tb2/lzxg/canvas-nest.min.js"></script>
 </body>
 
 </html>
